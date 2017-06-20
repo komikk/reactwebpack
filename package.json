@@ -1,0 +1,36 @@
+{
+  "name": "reactwebpack",
+  "version": "1.0.0",
+  "description": "https://www.typescriptlang.org/docs/handbook/react-&-webpack.html",
+  "main": "./dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "./node_modules/.bin/webpack",
+    "build-server": "cp server/index.htm dist/index.htm && cp -R static dist/ && tsc",
+    "build-server:watch": "cp server/index.htm dist/index.htm && cp -R static dist/ && tsc --watch",
+    "build": "npm run build-client && npm run build-server",
+    "start": "set NODE_ENV=development&& node ./dist/server.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.0.35",
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-hot-loader": "^3.0.1",
+    "express": "^4.15.2",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "webpack-hot-server-middleware": "^0.1.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}

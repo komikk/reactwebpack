@@ -1,0 +1,4 @@
+*.js
+*.mapgit
+node_modules
+dist
