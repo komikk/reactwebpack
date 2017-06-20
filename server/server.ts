@@ -12,7 +12,7 @@ let server;
 if (process.env.NODE_ENV === "development") {
     console.log("developmentfff");
     let webpack = require("webpack")
-    const webpackConfig = require("../webpack.config")
+    const webpackConfig = require("../webpack.config.ts")
     // 
     const compiler = webpack(webpackConfig)
     // middleware which can be mounted in an express server to serve the latest 
